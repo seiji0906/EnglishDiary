@@ -1,0 +1,2 @@
+class JaDiary < ApplicationRecord
+end

@@ -1,0 +1,12 @@
+<h1>日本語で日記を書きましょう！</h1>
+
+<%= form_with(model: @ja_diary, local: true) do |form| %>
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

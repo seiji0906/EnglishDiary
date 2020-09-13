@@ -1,0 +1,2 @@
+module JaDiariesHelper
+end
