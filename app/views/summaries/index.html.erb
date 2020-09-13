@@ -2,7 +2,7 @@
 
 <% @summaries.each do |summary| %>
   <div>
-    <%= summary.created_at %>
+    <%= summary.created_at.to_s(:datetime_jp) %>
     <%= summary.body %>
   </div>
 <% end %>
