@@ -1,0 +1,2 @@
+class EnDiary < ApplicationRecord
+end

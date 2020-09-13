@@ -1,0 +1,2 @@
+module EnDiariesHelper
+end
