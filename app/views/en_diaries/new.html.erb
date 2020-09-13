@@ -1,6 +1,9 @@
 <h1>日本語で書いた日記を英訳しよう！</h1>
 
-<%= form_with(model: @en_diary, local: true) do |form| %>
+
+<div><%= @ja_diary %></div>
+
+<%= form_with(model: @en_diary, url: new_summary_path, method: :get, local: true) do |form| %>
   <div>
     <%= form.label :body %>
     <%= form.text_area :body %>

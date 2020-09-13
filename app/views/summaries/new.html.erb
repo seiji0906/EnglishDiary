@@ -1,0 +1,16 @@
+<h1>英訳した文章を要約しよう！</h1>
+
+<div>
+  <%= @en_diary %>
+</div>
+
+<%= form_with(model: @summary, local: true) do |form| %>
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

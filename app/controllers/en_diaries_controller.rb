@@ -1,5 +1,6 @@
 class EnDiariesController < ApplicationController
   def new
+    @ja_diary = params[:ja_diary][:body]
     @en_diary = EnDiary.new
   end
 
