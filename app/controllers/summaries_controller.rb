@@ -1,7 +1,7 @@
 class SummariesController < ApplicationController
   def new
-    @en_diary = params[:en_diary][:body]
     @summary = Summary.new
+    @en_diary = params[:en_diary]
   end
 
   def create
@@ -13,9 +13,6 @@ class SummariesController < ApplicationController
 
   def index
     @summaries = Summary.all
-    @summary_1 = Summary.find(1)
-    @summary_2 = Summary.find(2)
-    @summary_3 = Summary.find(3)
   end
 
   def summaries_params

@@ -4,10 +4,8 @@ class JaDiariesController < ApplicationController
   end
 
   def create
-    @ja_diary = JaDiary.new(ja_diary_params)
-    if @ja_diary.save
-      redirect_to "/"
-    end
+    @ja_diary = params[:ja_diary][:body]
+    redirect_to new_en_diary_path(ja_diary: @ja_diary)
   end
 
   def ja_diary_params
