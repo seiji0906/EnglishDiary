@@ -6,12 +6,12 @@ class SummariesController < ApplicationController
   end
 
   def new_ja_diary
-    @ja_diary_summary = Summary.new
+    @ja_diary = Summary.new
   end
 
   def new_en_diary
     @ja_diary = params[:summary][:ja_diary]
-    @en_diary_summary = Summary.new
+    @en_diary = Summary.new
   end
 
   def create

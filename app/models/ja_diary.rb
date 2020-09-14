@@ -1,2 +1,0 @@
-class JaDiary < ApplicationRecord
-end
