@@ -1,0 +1,20 @@
+<h1>日本語で書いた日記を英訳しよう！</h1>
+
+<%= form_with(model: @en_diary_summary,url: new_summary_path, method: :get, local: true) do |form| %>
+  <div class="en_form">
+    <div class="ja_text">
+      <%= @ja_diary %>
+    </div>
+    <div>
+      <%= form.text_area :en_diary, class: "en_text_area", required: true %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.hidden_field :ja_diary, value: @ja_diary %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

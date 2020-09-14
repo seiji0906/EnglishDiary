@@ -8,6 +8,13 @@
     <%= form.text_area :body, class: "en_text_area", required: true %>
   </div>
 
+  <div>
+    <%= form.hidden_field :ja_diary, value: @ja_diary %>
+  </div>
+  <div>
+    <%= form.hidden_field :en_diary, value: @en_diary %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
