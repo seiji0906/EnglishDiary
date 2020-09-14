@@ -1,8 +1,33 @@
 <h1>日記一覧</h1>
-
-<% @summaries.each do |summary| %>
-  <div>
-    <%= summary.created_at.to_s(:datetime_jp) %>
-    <%= summary.body %>
+<!-- 成功！！ -->
+<div class="ja_form">
+  <div id="page_turn">
+    <% @summaries.each_with_index do |summary, num| %>
+      <div class="text_image">
+        <p class="summary_time">
+          <%= summary.created_at.to_s(:datetime_jp) %>
+        </p>
+        <p class="summary_body">
+          <%= summary.body %>
+        </p>
+        <%= image_tag 'diary_page.png', class: "img" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+
+<ul>
+  <li>
+    <span id="prevpage">前のページ</span>
+  </li>
+  <li>
+    <span id="nextpage">次のページ</span>
+  </li>
+</ul>
+
+
+
+
+
+
+

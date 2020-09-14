@@ -16,6 +16,13 @@
  body {
 
  }
+ .form {
+  background-image: url("diary_form.jpg");
+  background-size: contain;
+  height: 680px;
+  width: 1100px;
+  margin: 0 auto;/*formを中央に*/
+ }
  .ja_form {
   background-image: url("diary_form.jpg");
   background-size: contain;
@@ -65,15 +72,62 @@
   
 }
 
+#page_turn {
+  height: 620px;
+  width: 920px;
+  margin: 0 auto;
+}
+ul {
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+ul li {
+  width: 50%;
+  float: left;
+}
+
+ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#prevpage, #nextpage {
+  cursor: pointer;
+}
+
+.text_image {
+  position: relative;
+  height: 640px;
+  width: 800px;
+}
+
+.img {
+  height: 600px;
+  width: 444px;
+  font-size: 20px;
+  margin: 15px 0 0 10px;/*top right bottom left*/
+}
+
+.text_image p.summary_time {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  font-size: 20px;
+  color: black;
+}
 
 
-
-
-
-
-
-
-
+.text_image p.summary_body {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 20px;
+  color: black;
+}
 
 
 
