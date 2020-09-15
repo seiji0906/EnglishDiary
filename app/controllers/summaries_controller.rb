@@ -17,7 +17,11 @@ class SummariesController < ApplicationController
   def create
     @summary = Summary.new(summaries_params)
     if @summary.save
+      flash[:notice] = "日記ができました！"
       redirect_to summaries_path
+    else
+      redirect_to new_ja_diary_path
+      flash[:notice] = "日記の作成に失敗しました。"
     end
   end
 

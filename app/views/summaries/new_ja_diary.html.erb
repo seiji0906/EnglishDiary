@@ -2,7 +2,7 @@
 
 <%= form_with(model: @ja_diary,url: new_en_diary_path, method: :get, local: true) do |form| %>
   <div class="ja_form">
-    <%= form.text_area :ja_diary, class: "ja_text_area", required: true %>
+    <%= form.text_area :ja_diary, class: "ja_text_area space", required: true %>
   </div>
 
   <div class="actions">

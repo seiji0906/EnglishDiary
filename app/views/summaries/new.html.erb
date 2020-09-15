@@ -1,15 +1,11 @@
 <h1>英訳した文章を要約しよう！</h1>
 
-<% if @summary.errors.any? %>
-  <%= message %>
-<% end %>
-
 <%= form_with(model: @summary, local: true) do |form| %>
   <div class="en_form">
     <div class="ja_text">
       <%= @en_diary %>
     </div>
-    <%= form.text_area :body, class: "en_text_area", required: true %>
+    <%= form.text_area :body, class: "en_text_area space", required: true, maxlength: 1200 %>
   </div>
 
   <div>
