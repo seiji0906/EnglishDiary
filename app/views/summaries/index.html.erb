@@ -3,20 +3,20 @@
 <div class="ja_form">
   <div id="page_turn">
     <% @summaries.each_with_index do |summary, num| %>
-      <% if summary.body.length > 600 %>
+      <% if summary.body.length > 700 %>
             <div class="text_image">
               <p class="summary_time">
                 <%= summary.created_at.to_s(:datetime_jp) %>
               </p>
               <p class="summary_body">
-                <%= summary.body[0, 600] %>
+                <%= summary.body.match(/(.{700}\S*)/)[0] %>
               </p>
               <%= image_tag 'diary_page.png', class: "img" %>
             </div>
 
             <div class="text_image">
               <p class="summary_body">
-                <%= summary.body[601, summary.body.length.to_i] %>
+                <%= summary.body[summary.body.match(/(.{700}\S*)/)[0].to_i + 1..] %>
               </p>
               <%= image_tag 'diary_page.png', class: "img" %>
             </div>

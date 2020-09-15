@@ -23,6 +23,8 @@ class SummariesController < ApplicationController
 
   def index
     @summaries = Summary.all
+
+
   end
 
   def summaries_params
