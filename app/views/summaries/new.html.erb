@@ -1,5 +1,9 @@
 <h1>英訳した文章を要約しよう！</h1>
 
+<% if @summary.errors.any? %>
+  <%= message %>
+<% end %>
+
 <%= form_with(model: @summary, local: true) do |form| %>
   <div class="en_form">
     <div class="ja_text">

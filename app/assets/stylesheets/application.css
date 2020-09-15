@@ -56,6 +56,7 @@
   font-size: 20px;
   margin: 25px 0 0 125px;/*top right bottom left*/
   float: left;
+  overflow: scroll;
 }
 .en_text_area {
   height: 500px;
@@ -127,8 +128,7 @@ ul::after {
   left: 10%;
   font-size: 20px;
   color: black;
-}
-
+} 
 
 
 

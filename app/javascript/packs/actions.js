@@ -11,12 +11,17 @@ $(function() {
     $('form text_area:required').change(function () {
         //必須項目が空かどうかフラグ
         let flag = true;
+        let check = true;
         //必須項目をひとつずつチェック
         $('form text_area:required').each(function(e) {
             //もし必須項目が空なら
             if ($('form text_area:required').eq(e).val() === "") {
                 flag = false;
             }
+            // var count = $(".actions").text().replace(/\n/g, "改行").length;
+            // if (count > 1200) {
+            //     check = false;
+            // }
         });
         //全て埋まっていたら
         if (flag) {
@@ -28,4 +33,6 @@ $(function() {
             $('.actions').prop("disabled", true);
         }
     });
+
+
 });
