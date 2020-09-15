@@ -1,7 +1,7 @@
 class SummariesController < ApplicationController
   def new
-    @ja_diary = params[:summary][:ja_diary]
-    @en_diary = params[:summary][:en_diary]
+    # @ja_diary = params[:summary][:ja_diary]
+    # @en_diary = params[:summary][:en_diary]
     @summary = Summary.new
   end
 
