@@ -11,13 +11,20 @@ $(function(){
       direction: 'ltr',
     }
   );
-  // 前のページが押された時
+  //more_prevpageは、turn.jsで定義
+  $('#more_prevpage').click(function(){
+    $('#page_turn').turn('more_previous');
+  });  
   $('#prevpage').click(function(){
     $('#page_turn').turn('previous');
   });
   // 次のページが押された時
   $('#nextpage').click(function(){
     $('#page_turn').turn('next');
+  });
+
+  $('#more_nextpage').click(function(){
+    $('#page_turn').turn('more_next');
   });
 });
 

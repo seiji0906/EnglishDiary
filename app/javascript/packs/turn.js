@@ -1348,12 +1348,26 @@ turnMethods = {
   
   },
 
+  more_next: function() {
+ 
+    return this.turn('page', Math.min(this.data().totalPages,
+      turnMethods._view.call(this, this.data().page).pop() + 5));
+
+  },
+
   // Turns to the previous view
 
   previous: function() {
 
     return this.turn('page', Math.max(1,
       turnMethods._view.call(this, this.data().page).shift() - 1));
+
+  },
+
+  more_previous: function() {
+
+    return this.turn('page', Math.max(1,
+      turnMethods._view.call(this, this.data().page).shift() - 5));
 
   },
 

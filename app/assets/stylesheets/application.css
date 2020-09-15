@@ -75,7 +75,7 @@
 }
 
 #page_turn {
-  height: 620px;
+  height: 650px;
   width: 920px;
   margin: 0 auto;
 }
@@ -112,7 +112,7 @@ ul::after {
   clear: both;
 }
 
-#prevpage, #nextpage {
+#prevpage, #nextpage, #more_prevpage, #more_nextpage {
   cursor: pointer;
 }
 
@@ -123,7 +123,7 @@ ul::after {
 }
 
 .img {
-  height: 610px;
+  height: 630px;
   width: 450px;
   font-size: 20px;
   margin: 10px 0 0 10px;/*top right bottom left*/
