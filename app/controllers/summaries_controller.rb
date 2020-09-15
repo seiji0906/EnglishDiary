@@ -27,9 +27,18 @@ class SummariesController < ApplicationController
 
   def index
     @summaries = Summary.all
-
-
   end
+
+  def edit
+    @summary = Summary.find(params[:id])
+  end
+
+  def update
+    @summary = Summary.find(params[:id])
+    if @summary.update(summaries_params)
+      redirect_to summaries_path
+    end
+  end  
 
   def summaries_params
     params.require(:summary).permit(:body, :ja_diary, :en_diary)

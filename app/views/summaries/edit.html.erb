@@ -1,0 +1,49 @@
+<h1>日記を書き換える</h1>
+
+<%= form_with(model: @summary, local: true) do |form| %>
+<!-- 上２つのdivが邪魔してる -->
+<div class="ja_form">
+  <div id="edit_page_turn">
+
+    <div class="text_image">
+      <p class="summary_time">
+        日記の編集
+      </p>
+      <p class="summary_body">
+        <%= form.text_area :body, class: "edit_form space", required: true %>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        英訳の編集
+      </p>
+      <p class="summary_body">
+        <%= form.text_area :en_diary, class: "edit_form space", required: true %>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+    <div class="text_image">
+      <p class="summary_time">
+        日本語の日記の編集
+      </p>
+      <p class="summary_body">
+        <%= form.text_area :ja_diary, class: "edit_form space", required: true %>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_body">
+        わっしょーーーーーーーーーーーーい
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+  </div>
+</div>
+
+<%= form.submit %>
+<% end %>
+
+
