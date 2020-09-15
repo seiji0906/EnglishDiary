@@ -1,4 +1,5 @@
 class SummariesController < ApplicationController
+  before_action :detect_devise_variant
   def new
     # @ja_diary = params[:summary][:ja_diary]
     # @en_diary = params[:summary][:en_diary]
@@ -43,4 +44,43 @@ class SummariesController < ApplicationController
   def summaries_params
     params.require(:summary).permit(:body, :ja_diary, :en_diary)
   end
+
+  private
+
+
+  def detect_devise_variant
+    # いけてる
+    case request.user_agent
+    when /iPad/
+      request.variant = :tablet
+      p "tabletだぜ"
+    when /iPhone/
+      request.variant = :mobile
+      p "mobileだぜ"
+    else
+      p "hogehogeだぜ"
+    end
+  end
+
+
+
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
