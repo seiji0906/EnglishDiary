@@ -28,7 +28,7 @@
         日記を日本語で書こう！
       </p>
       <p class="summary_body">
-        <%= form.text_area :ja_diary, class: "edit_form space js_realtime_ja_diary", required: true %>
+        <%= form.text_area :ja_diary, class: "edit_form space js_realtime_ja_diary", required: true, maxlength: 800 %>
       </p>
       <%= image_tag 'diary_page.png', class: "edit_img" %>
     </div>
@@ -48,7 +48,7 @@
         日本語で書いた日記を英訳しよう！
       </p>
       <p class="summary_body">
-        <%= form.text_area :en_diary, class: "edit_form space js_realtime_en_diary", required: true %>
+        <%= form.text_area :en_diary, class: "edit_form space js_realtime_en_diary", required: true, maxlength: 1200 %>
       </p>
       <%= image_tag 'diary_page.png', class: "edit_img" %>
     </div>
@@ -68,7 +68,7 @@
         英訳した日記を要約しよう！
       </p>
       <p class="summary_body">
-        <%= form.text_area :body, class: "edit_form space", required: true %>
+        <%= form.text_area :body, class: "edit_form space", required: true, maxlength: 1000 %>
       </p>
       <%= image_tag 'diary_page.png', class: "edit_img" %>
     </div>

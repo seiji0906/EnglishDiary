@@ -1,18 +1,7 @@
 class SummariesController < ApplicationController
   before_action :detect_devise_variant
   def new
-    # @ja_diary = params[:summary][:ja_diary]
-    # @en_diary = params[:summary][:en_diary]
     @summary = Summary.new
-  end
-
-  def new_ja_diary
-    @ja_diary = Summary.new
-  end
-
-  def new_en_diary
-    @ja_diary = params[:summary][:ja_diary]
-    @en_diary = Summary.new
   end
 
   def create
