@@ -1,0 +1,65 @@
+
+<%= form_with(model: @summary, local: true) do |form| %>
+<div class="ja_form">
+  <div id="new_page_turn">
+    <div class="text_image">
+      <p class="summary_time">
+        日記を日本語で書こう！
+      </p>
+      <p class="summary_body">
+        <%= form.text_area :ja_diary, class: "edit_form space js_realtime_ja_diary", required: true %>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        日本語で書いた日記
+      </p>
+      <p class="summary_body js_realtime_ja">
+<!-- javascriptでリアルタイムに表示 -->
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        日本語で書いた日記を英訳しよう！
+      </p>
+      <p class="summary_body">
+        <%= form.text_area :en_diary, class: "edit_form space js_realtime_en_diary", required: true %>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        英訳した文章
+      </p>
+      <p class="summary_body js_realtime_en">
+<!-- javascriptでリアルタイムに表示 -->
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        英訳した日記を要約しよう！
+      </p>
+      <p class="summary_body">
+        <%= form.text_area :body, class: "edit_form space", required: true %>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_body">
+        わっしょーーーーーーーーーーーーい
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+  </div>
+</div>
+
+<%= form.submit %>
+<% end %>

@@ -190,12 +190,40 @@ ul::after {
 }
 
 
+.edit_form {
+  position: absolute;/*画像と重ねる*/
+  height: 360px;
+  width: 280px;
+  padding: 50px;
+  /*opacity: 0.5;透明度*/
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 0px 0 0 0px;/*top right bottom left*/
+}
 
 
+.edit_img {
+  height: 630px;
+  width: 450px;
+  font-size: 20px;
+  margin: 10px 0 0 10px;/*top right bottom left*/
+}
 
+.text_image p.js_realtime_sample {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  font-size: 18px;
+  color: black;
+}
 
-
-
-
+.sample_index {
+  position: absolute;/*画像と重ねる*/
+  height: 360px;
+  width: 280px;
+  font-size: 15px;
+  margin: 0px 0 0 90px;/*top right bottom left*/
+}
 
 

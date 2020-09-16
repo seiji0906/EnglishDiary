@@ -28,7 +28,11 @@ class SummariesController < ApplicationController
     if @summary.update(summaries_params)
       redirect_to summaries_path
     end
-  end  
+  end
+
+  def sample
+    @summaries = Summary.all.order(id: "DESC")
+  end
 
   def summaries_params
     params.require(:summary).permit(:body, :ja_diary, :en_diary)
