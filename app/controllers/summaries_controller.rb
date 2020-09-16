@@ -16,7 +16,7 @@ class SummariesController < ApplicationController
   end
 
   def index
-    @summaries = Summary.all
+    @summaries = Summary.all.order(id: "DESC")
   end
 
   def edit

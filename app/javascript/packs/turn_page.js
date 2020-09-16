@@ -8,7 +8,7 @@ $(function(){
       //自動中央揃え
       autoCenter: false,
       //右開きか左開きかの設定（右）
-      direction: 'ltr',
+      direction: 'rtl',
     }
   );
   //more_prevpageは、turn.jsで定義

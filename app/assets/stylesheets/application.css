@@ -28,7 +28,7 @@
   background-size: contain;
   height: 680px;
   width: 1100px;
-  margin: 0 auto;/*formを中央に*/
+  margin: 50px auto;/*formを中央に*/
 
 }
 .ja_text_area {
