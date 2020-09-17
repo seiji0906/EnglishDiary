@@ -34,6 +34,12 @@ class SummariesController < ApplicationController
     @summaries = Summary.all.order(id: "DESC")
   end
 
+  def destroy
+    @summary = Summary.find(params[:id])
+    @summary.destroy
+    redirect_to summaries_path
+  end
+
   def summaries_params
     params.require(:summary).permit(:body, :ja_diary, :en_diary)
   end
