@@ -11,21 +11,6 @@ $(function(){
       direction: 'rtl',
     }
   );
-  //more_prevpageは、turn.jsで定義
-  $('#more_prevpage').click(function(){
-    $('#page_turn').turn('more_previous');
-  });  
-  $('#prevpage').click(function(){
-    $('#page_turn').turn('previous');
-  });
-  // 次のページが押された時
-  $('#nextpage').click(function(){
-    $('#page_turn').turn('next');
-  });
-
-  $('#more_nextpage').click(function(){
-    $('#page_turn').turn('more_next');
-  });
 });
 
 $(function(){
@@ -42,14 +27,6 @@ $(function(){
       direction: 'ltr',
     }
   );
-  // 前のページが押された時
-  $('#prevpage').click(function(){
-    $('#page_turn').turn('previous');
-  });
-  // 次のページが押された時
-  $('#nextpage').click(function(){
-    $('#page_turn').turn('next');
-  });
 });
 
 //sample indexに表示
@@ -73,14 +50,6 @@ $(function(){
       direction: 'ltr',
     }
   );
-  // 前のページが押された時
-  $('#prevpage').click(function(){
-    $('#page_turn').turn('previous');
-  });
-  // 次のページが押された時
-  $('#nextpage').click(function(){
-    $('#page_turn').turn('next');
-  });
 });
 
 //sample indexに表示
@@ -105,6 +74,9 @@ $(function(){
     $('.edit_sample_en').text($('.new_sample_en').val());
     $('.edit_sample_summary').text($('.new_sample_summary').val());
 
+    $('.edit_sample_ja_text').text($('.new_sample_ja').val());
+    $('.edit_sample_en_text').text($('.new_sample_en').val());
+    $('.edit_sample_summary_text').text($('.new_sample_summary').val());
   });
 
 });
@@ -124,6 +96,32 @@ $(function(){
   });
 
 });
+
+
+$(function(){
+
+  //more_prevpageは、turn.jsで定義
+  $('#more_prevpage').click(function(){
+    $('#page_turn').turn('more_previous');
+  });  
+  $('#prevpage').click(function(){
+    $('#page_turn').turn('previous');
+  });
+  // 次のページが押された時
+  $('#nextpage').click(function(){
+    $('#page_turn').turn('next');
+  });
+
+  $('#more_nextpage').click(function(){
+    $('#page_turn').turn('more_next');
+  });
+
+});
+
+
+
+
+
 
 
 

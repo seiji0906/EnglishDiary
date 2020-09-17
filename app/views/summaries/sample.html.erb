@@ -1,12 +1,12 @@
 <h1>Sample</h1>
 
 <!-- newのsample -->
-<h2>
+<h4>
   1番目の本で日記を作成したら、日記を作成ボタンを押してください。
   <br>2番目の本に表示されます。
   <br>日記を編集ボタンを押すと、3番目の本で編集できます。
   <br>日記を保存ボタンを押すと、2番目の本に表示されます。
-</h2>
+</h4>
 <div class="form">
   <div class="explanation">
     <div class="text_image">
@@ -34,7 +34,7 @@
 サンプル
 私は今日ジブリの映画を4本見ました。
 １つ目は、もののけ姫、２つ目は、コクリコ坂から、３つ目は、風の谷のナウシカ、４つ目は、耳をすませばです。どれも言うまでもなく最高ですね。ジブリは日本の宝ですね。
-        </textarea>
+      </textarea>
       </p>
       <%= image_tag 'diary_page.png', class: "edit_img" %>
     </div>
@@ -76,7 +76,7 @@ The first is Princess Mononoke, the second is From Up on Poppy Hill, the third i
         英訳した日記を要約しよう！
       </p>
       <p class="summary_body">
-        <textarea class="edit_form space sample_summary new_sample_summary" required maxlength="1000">
+        <textarea class="edit_form space sample_summary new_sample_summary" required maxlength="800">
           sample
 I saw Ghibli today. Ghibli is really interesting to see at any time.
 I think it's really a Japanese treasure.
@@ -145,16 +145,16 @@ I think it's really a Japanese treasure.
 
 <ul>
   <li>
-    <span id="prevpage">前のページ</span>
+    <span id="nextpage">前のページ</span>
   </li>
   <li>
-    <span id="nextpage">次のページ</span>
+    <span id="prevpage">次のページ</span>
   </li>
   <li>
-    <span id="more_prevpage">さらに前のページ</span>
+    <span id="more_nextpage">さらに前のページ</span>
   </li>
   <li>
-    <span id="more_nextpage">さらに次のページ</span>
+    <span id="more_prevpage">さらに次のページ</span>
   </li>
 </ul>
 
@@ -178,7 +178,7 @@ I think it's really a Japanese treasure.
       <p class="summary_time">
         日本語で書いた日記
       </p>
-      <p class="summary_body js_realtime_ja">
+      <p class="summary_body edit_sample_ja_text">
 <!-- javascriptでリアルタイムに表示 -->
       </p>
       <%= image_tag 'diary_page.png', class: "edit_img" %>
@@ -198,7 +198,7 @@ I think it's really a Japanese treasure.
       <p class="summary_time">
         英訳した文章
       </p>
-      <p class="summary_body js_realtime_en">
+      <p class="summary_body edit_sample_en_text">
 <!-- javascriptでリアルタイムに表示 -->
       </p>
       <%= image_tag 'diary_page.png', class: "edit_img" %>
@@ -216,7 +216,7 @@ I think it's really a Japanese treasure.
 
     <div class="text_image">
       <p class="summary_body">
-        わっしょーーーーーーーーーーーーい
+        わしゃわしゃわしゃわしゃわしゃーーーーーーーーーーーーーーい
       </p>
       <%= image_tag 'diary_page.png', class: "edit_img" %>
     </div>

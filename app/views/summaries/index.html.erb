@@ -17,6 +17,7 @@
             <div class="text_image">
               <p class="summary_body">
                 <%= summary.body[summary.body.match(/(.{700}\S*)/)[0].to_i + 1..] %>
+                <br><%= link_to '削除', summaries_path, method: :delete, data: {"turbolinks" => false, confirm: '削除してよろしいですか？'} %>
               </p>
               <%= image_tag 'diary_page.png', class: "img" %>
             </div>
@@ -28,6 +29,7 @@
           </p>
           <p class="summary_body">
             <%= summary.body %>
+            <br><%= link_to '削除', "/summaries/#{summary.id}", method: :delete, data: {"turbolinks" => false, confirm: '削除してよろしいですか？'} %>
           </p>
           <%= image_tag 'diary_page.png', class: "img" %>
         </div>
@@ -38,15 +40,15 @@
 
 <ul>
   <li>
-    <span id="prevpage">前のページ</span>
+    <span id="nextpage">前のページ</span>
   </li>
   <li>
-    <span id="nextpage">次のページ</span>
+    <span id="prevpage">次のページ</span>
   </li>
   <li>
-    <span id="more_prevpage">さらに前のページ</span>
+    <span id="more_nextpage">さらに前のページ</span>
   </li>
   <li>
-    <span id="more_nextpage">さらに次のページ</span>
+    <span id="more_prevpage">さらに次のページ</span>
   </li>
 </ul>
