@@ -13,6 +13,13 @@
     <% if flash[:notice] %>
       <%= flash[:notice] %>
     <% end %>  
+    <% if @current_user %>
+      <%= link_to 'マイページ', mypage_path %>
+      <%= link_to 'ログアウト', logout_path, method: :delete %>
+    <% else %>
+      <%= link_to '登録', new_user_path %>
+      <%= link_to 'ログイン', users_login_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

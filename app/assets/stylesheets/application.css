@@ -94,19 +94,19 @@
 
 }
 
-ul {
+.page-ul {
   text-align: center;
   list-style: none;
   /*width: 100%;*/
   margin-bottom: 30px;
 }
 
-ul li {
+.page-ul li {
   width: 50%;
   float: left;
 }
 
-ul::after {
+.page-ul::after {
   content: "";
   display: block;
   clear: both;
@@ -226,4 +226,6 @@ ul::after {
   margin: 0px 0 0 90px;/*top right bottom left*/
 }
 
+.error-ul {
 
+}

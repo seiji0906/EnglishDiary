@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_14_212503) do
+ActiveRecord::Schema.define(version: 2020_09_19_105709) do
 
   create_table "summaries", force: :cascade do |t|
     t.text "body"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2020_09_14_212503) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "ja_diary"
     t.text "en_diary"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_users_on_name", unique: true
   end
 
 end

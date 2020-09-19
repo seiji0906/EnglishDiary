@@ -56,13 +56,13 @@ $(function(){
 $(function(){
   $('.sample_submit').click(function(){
     $('.js_realtime_summary').text($('.sample_summary').val());
-      var now = new Date();
-      var y = now.getFullYear();
-      var m = now.getMonth() + 1;
-      var d = now.getDate();
-      var h = now.getHours();
-      var mi = now.getMinutes();
-      $('.js_realtime_nowtime').text(y + '年 ' + m + '月 ' + d + '日 ' + h + '時 ' + mi + '分');
+    var now = new Date();
+    var y = now.getFullYear();
+    var m = now.getMonth() + 1;
+    var d = now.getDate();
+    var h = now.getHours();
+    var mi = now.getMinutes();
+    $('.js_realtime_nowtime').text(y + '年 ' + m + '月 ' + d + '日 ' + h + '時 ' + mi + '分');
   });
 
 });

@@ -43,9 +43,7 @@ class SummariesController < ApplicationController
   def summaries_params
     params.require(:summary).permit(:body, :ja_diary, :en_diary)
   end
-
   private
-
 
   def detect_devise_variant
     # いけてる
@@ -60,10 +58,6 @@ class SummariesController < ApplicationController
       p "hogehogeだぜ"
     end
   end
-
-
-
-
 end
 
 
