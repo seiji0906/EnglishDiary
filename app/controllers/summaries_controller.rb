@@ -1,22 +1,19 @@
 class SummariesController < ApplicationController
-  before_action :detect_devise_variant
+  before_action :user_logged_in?, only: [:new, :create, :edit, :update, :destroy]
   def new
     @summary = Summary.new
   end
 
   def create
     @summary = Summary.new(summaries_params)
+    @summary.user_id = @current_user.id
     if @summary.save
       flash[:notice] = "日記ができました！"
-      redirect_to summaries_path
+      redirect_to mypage_path
     else
-      redirect_to new_ja_diary_path
+      redirect_to new_summary_path
       flash[:notice] = "日記の作成に失敗しました。"
     end
-  end
-
-  def index
-    @summaries = Summary.all.order(id: "DESC")
   end
 
   def edit
@@ -26,7 +23,7 @@ class SummariesController < ApplicationController
   def update
     @summary = Summary.find(params[:id])
     if @summary.update(summaries_params)
-      redirect_to summaries_path
+      redirect_to mypage_path
     end
   end
 
@@ -37,26 +34,11 @@ class SummariesController < ApplicationController
   def destroy
     @summary = Summary.find(params[:id])
     @summary.destroy
-    redirect_to summaries_path
+    redirect_to mypage_path
   end
 
   def summaries_params
-    params.require(:summary).permit(:body, :ja_diary, :en_diary)
-  end
-  private
-
-  def detect_devise_variant
-    # いけてる
-    case request.user_agent
-    when /iPad/
-      request.variant = :tablet
-      p "tabletだぜ"
-    when /iPhone/
-      request.variant = :mobile
-      p "mobileだぜ"
-    else
-      p "hogehogeだぜ"
-    end
+    params.require(:summary).permit(:body, :ja_diary, :en_diary, :user_id)
   end
 end
 

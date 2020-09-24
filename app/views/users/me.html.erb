@@ -1,1 +1,56 @@
 <%= @current_user.name %>
+
+
+<%= link_to "日記を書く", new_summary_path, data: {"turbolinks" => false} %>
+<div class="ja_form">
+  <div id="page_turn">
+    <% @summaries.each_with_index do |summary, num| %>
+      <% if summary.body.length > 700 %>
+            <div class="text_image">
+              <p class="summary_time">
+                <%= link_to summary.created_at.to_s(:datetime_jp), edit_summary_path(summary), data: {"turbolinks" => false} %>
+              </p>
+              <p class="summary_body">
+                <%= summary.body.match(/(.{700}\S*)/)[0] %>
+              </p>
+              <%= image_tag 'diary_page.png', class: "img" %>
+            </div>
+
+            <div class="text_image">
+              <p class="summary_body">
+                <%= summary.body[summary.body.match(/(.{700}\S*)/)[0].to_i + 1..] %>
+                <br><%= link_to '削除', summaries_path, method: :delete, data: {"turbolinks" => false, confirm: '削除してよろしいですか？'} %>
+              </p>
+              <%= image_tag 'diary_page.png', class: "img" %>
+            </div>
+      <% else %>
+
+        <div class="text_image">
+          <p class="summary_time">
+            <%= link_to summary.created_at.to_s(:datetime_jp), edit_summary_path(summary), data: {"turbolinks" => false} %>
+          </p>
+          <p class="summary_body">
+            <%= summary.body %>
+            <br><%= link_to '削除', "/summaries/#{summary.id}", method: :delete, data: {"turbolinks" => false, confirm: '削除してよろしいですか？'} %>
+          </p>
+          <%= image_tag 'diary_page.png', class: "img" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<ul class="page-ul">
+  <li>
+    <span id="nextpage">前のページ</span>
+  </li>
+  <li>
+    <span id="prevpage">次のページ</span>
+  </li>
+  <li>
+    <span id="more_nextpage">さらに前のページ</span>
+  </li>
+  <li>
+    <span id="more_prevpage">さらに次のページ</span>
+  </li>
+</ul>

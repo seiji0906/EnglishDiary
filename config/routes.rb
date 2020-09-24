@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'mypage', to: 'users#me'
   get 'login', to: 'users#login', as: 'users_login'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :summaries 
+  resources :summaries, :only => [:new, :create, :edit, :update, :destroy]
   resources :users, :only => [:new, :create]
   get 'sample', to: 'summaries#sample', as: 'sample'
   root to: 'summaries#sample'

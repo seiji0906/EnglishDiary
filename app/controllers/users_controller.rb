@@ -18,11 +18,10 @@ class UsersController < ApplicationController
   end
 
   def me
-    
+    @summaries = Summary.where(user_id: @current_user.id).order(id: "DESC")
   end
 
   def login
-    
   end
 
   private
