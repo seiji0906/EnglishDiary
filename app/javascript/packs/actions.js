@@ -131,3 +131,27 @@ $(function() {
     $('.edit_sample_en_text').text(val);
   });
 });
+
+
+$(function(){
+    // 「id="clcbtn"」がクリックされた場合
+    $('#show').hide();
+    $("#show-botton").click(function(){
+        // 「class="listtext"」の表示、非表示を切り替える
+        $("#show").toggle();
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
