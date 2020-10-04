@@ -146,6 +146,85 @@ $(function(){
 
 
 
+//windowの幅　表示
+
+$(function(){
+  $(window).on("load resize", function(){
+    if ($(this).width() > 1000){
+      $('.good').show();
+      $('.bad').hide();
+    }else if($(this).width() > 700 && $(this).width() < 1000 ){
+      $('.good').hide();
+      $('.bad').show();
+    }else{
+      $('.good').show();
+      $('.bad').show();
+    }
+  });
+});
+
+//ja_modal
+
+$(function(){
+    $('.js-ja-modal-open').on('click',function(){
+        $('.js-ja-modal').fadeIn();
+        return false;
+    });
+    $('.js-ja-modal-close').on('click',function(){
+        $('.js-ja-modal').fadeOut();
+        return false;
+    });
+});
+
+//en_modal
+$(function(){
+    $('.js-en-modal-open').on('click',function(){
+        $('.js-en-modal').fadeIn();
+        return false;
+    });
+    $('.js-en-modal-close').on('click',function(){
+        $('.js-en-modal').fadeOut();
+        return false;
+    });
+});
+
+//body_modal
+$(function(){
+    $('.js-body-modal-open').on('click',function(){
+        $('.js-body-modal').fadeIn();
+        return false;
+    });
+    $('.js-body-modal-close').on('click',function(){
+        $('.js-body-modal').fadeOut();
+        return false;
+    });
+});
+
+//login
+$(function(){
+  $(".login-button").click(function(event){
+      event.preventDefault();
+       
+      $('.login_form').fadeOut(500);
+      $('.title').addClass('form_success');
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,1 +1,52 @@
 <h1>モバイル対応</h1>
+
+<%= form_with(model: @summary, local: true) do |form| %>
+
+  <!-- ja_modalを表示するボタン -->
+  <div class="content">
+      <button class="js-ja-modal-open">クリックでモーダルを表示</button>
+  </div>
+
+  <!-- ja_modal -->
+  <div class="modal js-ja-modal">
+      <div class="modal__bg js-ja-modal-close"></div>
+      <div class="modal__content">
+        <%= form.text_area :ja_diary, class: "space mobile_form", required: true, maxlength: 800 %>
+        <button class="js-ja-modal-close close">次へ</button>
+      </div>
+  </div>
+
+  <!-- en_modalを表示するボタン -->
+  <div class="content">
+      <button class="js-en-modal-open">クリックでモーダルを表示</button>
+  </div>
+
+  <!-- en_modal -->
+  <div class="modal js-en-modal">
+      <div class="modal__bg js-en-modal-close"></div>
+      <div class="modal__content">
+        <%= form.text_area :en_diary, class: "space mobile_form", required: true, maxlength: 800 %>
+        <button class="js-en-modal-close close">次へ</button>
+      </div>
+  </div>
+
+  <!-- body_modalを表示するボタン -->
+  <div class="content">
+      <button class="js-body-modal-open">クリックでモーダルを表示</button>
+  </div>
+
+  <!-- body_modal -->
+  <div class="modal js-body-modal">
+      <div class="modal__bg js-body-modal-close"></div>
+      <div class="modal__content">
+        <%= form.text_area :body, class: "space mobile_form", required: true, maxlength: 800 %>
+        <button class="js-body-modal-close close">次へ</button>
+      </div>
+  </div>
+<%= form.submit %>
+
+<% end %>
+<!-- 
+modalで追加するとこまでできたから、あとは、jaの文字をenに、enの文字をbodyに表示する（色を変えて）
+追加する際は、文字の色で判断
+ -->

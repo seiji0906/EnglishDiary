@@ -10,13 +10,13 @@
   </head>
 
   <body> 
-    <% if @current_user %>
+<!--     <% if @current_user %>
       <%= link_to 'マイページ', mypage_path, data: {"turbolinks" => false} %>
       <%= link_to 'ログアウト', logout_path, method: :delete %>
     <% else %>
       <%= link_to '登録', new_user_path %>
       <%= link_to 'ログイン', users_login_path %>
-    <% end %>
+    <% end %> -->
 
     <% if flash[:notice] %>
       <%= flash[:notice] %>

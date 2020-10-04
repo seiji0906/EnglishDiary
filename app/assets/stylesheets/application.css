@@ -231,13 +231,16 @@
 }
 
 
+
+
+/*ログイン画面*/
+
 #login {
   margin: 0;
   padding: 0;
   background-image: url(login_backimage.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  font-family: Poppins;
+  /*-webkit-background-size: cover;*/
+  background-size: cover;/*これ指定しないと画像が足りない*/
 }
 
 .login_form {
@@ -272,7 +275,7 @@
 
 .login_form input[type=text], .login_form input[type=password] {
   border: none;
-  border-bottom: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;*/
   background: transparent;
   outline: none;
   height: 30px;
@@ -285,12 +288,105 @@
   border: none;
   outline: none;
   height: 40px;
-  background: #f6648b;
+  /*background: #f6648b;*/
+  background: #6495ed;
   color: #fff;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  /*width: 50px 0 0 0;top right bottom left*/
 }
+.login_form input:hover {
+  opacity: 0.8;
+}
+
+.change_signup {
+  text-align: center;
+}
+
+/*ログイン画面ここまで*/
+
+
+
+
+.content{
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__content{
+  background: #fff;
+  left: 10%;
+  padding: 40px;
+  position: absolute;
+  top: 10%;
+  /*transform: translate(-50%,-50%);*/
+  width: 80%;
+  height: 80%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.close {
+  width: 80%;
+  height: 8%;
+  margin: 5% 10% 7% 10%;
+  font-weight: bold;
+  font-size: 30px; 
+}
+
+.mobile_form {
+  /*opacity: 0.5;透明度*/
+  width: 80%;
+  height: 80%;
+  font-size: 35px;
+/*  top: 60%;
+  left: 10%;*/
+  text-align: center;
+  /*transform: translate(-50%,-50%);*/
+/*  align-items: center;
+  justify-content: center;*/
+  margin: 8% 8% 0 8%;/*top right bottom left*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

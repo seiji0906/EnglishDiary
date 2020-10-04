@@ -1,0 +1,64 @@
+<!-- edit -->
+
+<div class="ja_form">
+  <div id="edit_page_turn">
+    <div class="text_image">
+      <p class="summary_time">
+        日記を日本語で書こう！
+      </p>
+      <p class="summary_body">
+        <textarea class="edit_form space js_realtime_ja_diary edit_sample_ja" required></textarea>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        日本語で書いた日記
+      </p>
+      <p class="summary_body edit_sample_ja_text">
+<!-- javascriptでリアルタイムに表示 -->
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        日本語で書いた日記を英訳しよう！
+      </p>
+      <p class="summary_body">
+        <textarea class="edit_form space js_realtime_ja_diary edit_sample_en" required></textarea>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        英訳した文章
+      </p>
+      <p class="summary_body edit_sample_en_text">
+<!-- javascriptでリアルタイムに表示 -->
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_time">
+        英訳した日記を要約しよう！
+      </p>
+      <p class="summary_body">
+        <textarea class="edit_form space js_realtime_ja_diary edit_sample_summary" required></textarea>
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+
+    <div class="text_image">
+      <p class="summary_body">
+        わしゃわしゃわしゃわしゃわしゃーーーーーーーーーーーーーーい
+      </p>
+      <%= image_tag 'diary_page.png', class: "edit_img" %>
+    </div>
+  </div>
+</div>
+
+<input type="submit" class="sample_edit_submit_save" value="日記を保存">
