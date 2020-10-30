@@ -238,9 +238,16 @@
 #login {
   margin: 0;
   padding: 0;
-  background-image: url(login_backimage.jpg);
+  background-image: url(yuyake.png);
+  transition-property: background-image;
+  background-size: 100% 800px;/*これ指定しないと画像が足りない*/
+  transition-duration: 30s;
   /*-webkit-background-size: cover;*/
-  background-size: cover;/*これ指定しないと画像が足りない*/
+}
+
+#login:hover{
+  background-image: url(hosizora.png);
+  /*background-size: 100% 100px;*/
 }
 
 .login_form {
@@ -255,7 +262,6 @@
   box-sizing: border-box;
   box-shadow: 8px 8px 50px #000;
 }
-
 
 .title {
   margin: 0;
