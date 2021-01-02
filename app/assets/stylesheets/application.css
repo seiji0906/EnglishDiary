@@ -238,15 +238,15 @@
 #login {
   margin: 0;
   padding: 0;
-  background-image: url(yuyake.png);
+  background-image: url(yuyake.jpg);
   transition-property: background-image;
+  transition-duration: 15s;
   background-size: 100% 800px;/*これ指定しないと画像が足りない*/
-  transition-duration: 30s;
   /*-webkit-background-size: cover;*/
 }
 
 #login:hover{
-  background-image: url(hosizora.png);
+  background-image: url(hosizora.jpg);
   /*background-size: 100% 100px;*/
 }
 
