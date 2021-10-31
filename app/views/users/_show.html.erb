@@ -5,7 +5,7 @@
       <% if summary.body.length > 700 %>
             <div class="text_image">
               <p class="summary_time">
-                <%= link_to summary.created_at.to_s(:datetime_jp), "", data: {"turbolinks" => false} %>
+                <%= link_to summary.created_at.to_s(:datetime_jp), edit_summary_path(summary), data: {"turbolinks" => false} %>
               </p>
               <p class="summary_body">
                 <%= summary.body.match(/(.{700}\S*)/)[0] %>
@@ -23,7 +23,7 @@
 
         <div class="text_image">
           <p class="summary_time">
-            <%= link_to summary.created_at.to_s(:datetime_jp), "", data: {"turbolinks" => false} %>
+            <%= link_to summary.created_at.to_s(:datetime_jp), edit_summary_path(summary), data: {"turbolinks" => false} %>
           </p>
           <p class="summary_body">
             <%= summary.body %>
