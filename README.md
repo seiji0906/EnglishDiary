@@ -1,24 +1,14 @@
-# README
+英語で日記を書くことにより、英語学習のサポートをする
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+手順は以下
+１　日本語で日記を書く
 
-Things you may want to cover:
+2 日本語を英語に訳す
 
-* Ruby version
+3　上記の英文を短くまとめる
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+ページ遷移はなし
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+文字を入力するところが、日記手帳のようになっており、ページを捲る動作も楽しめる。
